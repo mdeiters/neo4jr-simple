@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "neo4jr-simple"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine.}
+    gem.description = %Q{Nothing more then Neo4j and Ruby goodness}
     gem.email = "matthew_deiters@mckinsey.com"
     gem.homepage = "http://github.com/mdeiters/neo4jr-simple"
     gem.authors = ["Matthew Deiters"]
