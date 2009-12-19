@@ -1,6 +1,58 @@
-= neo4jr-simple
+= neo4jr-simple GEM
 
-Description goes here.
+A simple bare bones JRuby wrapper for the Neo4j graph database engine.
+
+It provides:
+* The Neo4j Core Java Library (required and ready to use)
+* Raw access to the Java API (using Neo4j::DB.instance )
+* Extensions to the Java API to make node manipulation and traversal more rubyesque
+* Nothing more then Neo4j goodness
+
+== Prerequisites
+
+* Java
+* JRuby
+
+== Recommend way of installing JRuby
+
+1. Install RVM: http://rvm.beginrescueend.com/
+2. Install Jruby using rvm: rvm install jruby
+3. Switch ruby to JRuby: rvm use jruby
+
+== Getting Started
+
+  Note: the functional_example_spec has examples of basic operations in neo4j like creating, retrieving and updating nodes along with simple traversal examples.
+
+The Neo4j API Docs can be found here http://api.neo4j.org/current/org/neo4j/api/core/package-summary.html
+
+Basic Node creation:
+
+   Neo4jr::DB.execute do |neo|
+     node = neo.createNode
+     node[:name] = 'Deiters, Matt'
+   end
+   
+Retrieve a Node:
+
+   Neo4jr::DB.execute do |neo|
+     node = neo.getNodeById(1234)
+   end
+  
+Traverse Database from a node:
+
+   Neo4jr::DB.execute do |neo|
+     philip_seymour_hoffman = neo.getNodeById(1102)
+
+     order         = Neo4jr::Order::BREADTH_FIRST
+     stop_when     = Neo4jr::StopEvaluator::END_OF_GRAPH
+     return_when   = Neo4jr::ReturnableEvaluator::ALL
+     relationships = Neo4jr::RelationshipType.outgoing(:acted_in)
+     
+     traverser = philip_seymour_hoffman.traverse(order, stop_when, return_when, relationships_of_type)
+     traverser.each do |node|
+       #...
+     end
+   end
 
 == Note on Patches/Pull Requests
  
@@ -12,6 +64,13 @@ Description goes here.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
+== Author
+* Matthew Deiters
+* Twitter  : http://twitter.com/mdeiters
+* GitHub   : https://github.com/mdeiters
+* LinkedIn : http://www.linkedin.com/in/matthewdeiters
+* Blog     : http://www.theagiledeveloper.com
+  
 == Copyright
 
 Copyright (c) 2009 Matthew Deiters. See LICENSE for details.
