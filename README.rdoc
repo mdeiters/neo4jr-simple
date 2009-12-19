@@ -21,8 +21,9 @@ A simple, ready to go JRuby wrapper for the Neo4j graph database engine which pr
 
 == Getting Started
 
+* {gem install neo4jr-simple} [http://gemcutter.org/gems/neo4jr-simple]
+* {Neo4j API Docs} [http://api.neo4j.org/current/org/neo4j/api/core/package-summary.html]
 * functional_example_spec includes examples of basic operations in neo4j like creating, retrieving and updating nodes along with simple traversal examples.
-* Neo4j API: http://api.neo4j.org/current/org/neo4j/api/core/package-summary.html
 
 Basic Node creation:
 
