@@ -4,6 +4,16 @@ module Neo4jr
     ALL                = org.neo4j.api.core.ReturnableEvaluator.ALL
     ALL_BUT_START_NODE = org.neo4j.api.core.ReturnableEvaluator.ALL_BUT_START_NODE
     
+    # Creates a new ReturnableEvaluator on the fly that delgates to the passed in block to use with the traverse method. 
+    # The block should return either true or false
+    # See http://api.neo4j.org/current/org/neo4j/api/core/ReturnableEvaluator.html#isReturnableNode(org.neo4j.api.core.TraversalPosition)
+    #
+    # Examples:
+    #
+    #   Return.when do |current_position|
+    #     current_position.depth > 3 && current_position.previousNode[:active] == false
+    #   end
+    #
     def self.when(&block)
       instance = new
       instance.instance_variable_set(:@evaluator_block, block)
