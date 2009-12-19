@@ -1,11 +1,11 @@
-= neo4jr-simple GEM
+= neo4jr-simple
 
-A simple, ready to go JRuby wrapper for the Neo4j graph database engine.
-
-It provides:
+A simple, ready to go JRuby wrapper for the Neo4j graph database engine which provides:
 * The Neo4j Core Java Library (required and ready to use)
 * Raw access to the Java API (using Neo4j::DB.instance )
 * Extensions to the Java API to make node manipulation and traversal more rubyesque
+* Working specs
+* Loaded Neo4j sample database with IMDB data
 * Nothing more then Neo4j goodness
 
 == Prerequisites
