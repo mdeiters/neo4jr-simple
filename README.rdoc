@@ -1,6 +1,6 @@
 = neo4jr-simple GEM
 
-A simple bare bones JRuby wrapper for the Neo4j graph database engine.
+A simple, ready to go JRuby wrapper for the Neo4j graph database engine.
 
 It provides:
 * The Neo4j Core Java Library (required and ready to use)
@@ -21,9 +21,8 @@ It provides:
 
 == Getting Started
 
-  Note: the functional_example_spec has examples of basic operations in neo4j like creating, retrieving and updating nodes along with simple traversal examples.
-
-The Neo4j API Docs can be found here http://api.neo4j.org/current/org/neo4j/api/core/package-summary.html
+* functional_example_spec includes examples of basic operations in neo4j like creating, retrieving and updating nodes along with simple traversal examples.
+* Neo4j API: http://api.neo4j.org/current/org/neo4j/api/core/package-summary.html
 
 Basic Node creation:
 
@@ -54,6 +53,15 @@ Traverse Database from a node:
      end
    end
 
+
+== Contributors
+
+====Matthew Deiters
+* Twitter  : http://twitter.com/mdeiters
+* GitHub   : https://github.com/mdeiters
+* LinkedIn : http://www.linkedin.com/in/matthewdeiters
+* Blog     : http://www.theagiledeveloper.com
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
@@ -63,13 +71,6 @@ Traverse Database from a node:
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
-
-== Author
-* Matthew Deiters
-* Twitter  : http://twitter.com/mdeiters
-* GitHub   : https://github.com/mdeiters
-* LinkedIn : http://www.linkedin.com/in/matthewdeiters
-* Blog     : http://www.theagiledeveloper.com
   
 == Copyright
 
