@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
   s.date = %q{2009-12-18}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{Nothing more then Neo4j and Ruby goodness}
   s.email = %q{matthew_deiters@mckinsey.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
      "lib/neo4jr/stop_evaluator.rb",
      "lib/neo4jr/traverser_extension.rb",
      "lib/neo4jr/version.rb",
+     "neo4jr-simple.gemspec",
      "spec/db_spec.rb",
      "spec/functional_example_spec.rb",
      "spec/node_extension_spec.rb",
@@ -71,7 +72,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine.}
   s.test_files = [
     "spec/db_spec.rb",
      "spec/functional_example_spec.rb",
