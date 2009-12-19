@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{neo4jr-simple}
-  s.version = ""
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "LICENSE",
      "README.rdoc",
      "Rakefile",
+     "VERSION",
      "lib/jars/jta-1_1.jar",
      "lib/jars/neo-1.0-b9.jar",
      "lib/jars/shell-1.0-b9.jar",
