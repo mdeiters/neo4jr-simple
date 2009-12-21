@@ -1,9 +1,9 @@
 include Java
 
 module Neo4j
-  require 'jars/neo-1.0-b9.jar'
-  require 'jars/shell-1.0-b9.jar'
-  require 'jars/jta-1_1.jar'
+  require 'jars/neo-1.0-b10.jar'
+  require 'jars/shell-1.0-b10.jar'
+  require 'jars/jta-1.1.jar'
 end
 
 require 'neo4jr/configuration'
