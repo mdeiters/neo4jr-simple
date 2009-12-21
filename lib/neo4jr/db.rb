@@ -4,6 +4,7 @@ module Neo4jr
       def instance
         @neo ||= begin
           neo = org.neo4j.api.core.EmbeddedNeo.new(Configuration.database_path)
+          neo.enable_remote_shell
           at_exit do
             neo.shutdown
           end

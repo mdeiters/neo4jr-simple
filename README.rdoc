@@ -53,6 +53,8 @@ Traverse Database from a node:
      end
    end
 
+Use command line shell to query and modify the graph:
+#> neosh -path <path_to_neo_db>
 
 == Contributors
 
@@ -61,7 +63,11 @@ Traverse Database from a node:
 * GitHub   : https://github.com/mdeiters
 * LinkedIn : http://www.linkedin.com/in/matthewdeiters
 * Blog     : http://www.theagiledeveloper.com
-  
-== Copyright
+
+======Heinrich Klobuczek
+* GitHub   : https://github.com/klobuczek
+* LinkedIn : http://www.linkedin.com/pub/heinrich-klobuczek/0/a71/39b
+
+ Copyright
 
 Copyright (c) 2009 Matthew Deiters. See LICENSE for details.
