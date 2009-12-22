@@ -19,3 +19,9 @@ rdoc
 pkg
 
 ## PROJECT::SPECIFIC
+
+##Netbeans
+nbproject
+
+##Rubymine
+.idea

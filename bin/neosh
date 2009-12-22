@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + "/../lib")
+require 'neo4jr-simple.rb'
+
+
+Neo4jr::CLI.execute(ARGV)

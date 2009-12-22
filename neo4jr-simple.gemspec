@@ -5,13 +5,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{neo4jr-simple}
-  s.version = "1.0.0"
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
-  s.date = %q{2009-12-18}
-  s.description = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine. Nothing more then Neo4j and Ruby goodness}
   s.email = %q{matthew_deiters@mckinsey.com}
+  s.description = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine. Nothing more then Neo4j and Ruby goodness}
+  s.version = "0.1.2"
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.date = %q{2009-12-21}
+  s.default_executable = %q{neosh}
+  s.executables = ["neosh"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -23,10 +24,12 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/neosh",
      "lib/jars/jta-1.1.jar",
      "lib/jars/neo-1.0-b10.jar",
      "lib/jars/shell-1.0-b10.jar",
      "lib/neo4jr-simple.rb",
+     "lib/neo4jr/cli.rb",
      "lib/neo4jr/configuration.rb",
      "lib/neo4jr/db.rb",
      "lib/neo4jr/direction.rb",
