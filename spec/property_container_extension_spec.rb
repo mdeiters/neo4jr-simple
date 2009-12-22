@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe 'node extension' do
+describe 'property container extension' do
 
   it "adds [] read accessor method for properties" do
     tom_hanks = Neo4jr::DB.instance.getNodeById(893)
@@ -14,5 +14,4 @@ describe 'node extension' do
       tom_hanks[:testing].should == '123'
     end
   end
-  
 end

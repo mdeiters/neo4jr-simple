@@ -24,6 +24,13 @@ module Neo4jr
       end
       instance
     end
+    
+    def self.everything
+      self.when do |position|
+        true
+      end
+    end
+    
   end
   
   Return = ReturnableEvaluator
