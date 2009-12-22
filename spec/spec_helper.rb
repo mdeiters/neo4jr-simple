@@ -10,6 +10,3 @@ puts Neo4jr::DB
 Spec::Runner.configure do |config|
   
 end
-
-
-

@@ -1,5 +1,5 @@
 # Extends the Node class with a hash style accessor methods to the node's properties
-org.neo4j.api.core.Node.java_class.ruby_class.class_eval do
+org.neo4j.api.core.Node.java_class.ruby_class.class_eval do 
   
   def id
     getId
@@ -17,6 +17,14 @@ org.neo4j.api.core.Node.java_class.ruby_class.class_eval do
   #
   def []=(arg, value)
     set_property(arg.to_s, value)
+  end
+  
+  def properties
+    properties = {}
+    propertyKeys.each do |property|
+      properties[property] = self[property]
+    end
+    properties
   end
   
 end

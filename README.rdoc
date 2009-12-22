@@ -48,12 +48,11 @@ Traverse Database from a node:
      return_when   = Neo4jr::ReturnableEvaluator::ALL
      relationships = Neo4jr::RelationshipType.outgoing(:acted_in)
      
-     traverser = philip_seymour_hoffman.traverse(order, stop_when, return_when, relationships_of_type)
+     traverser = philip_seymour_hoffman.traverse(order, stop_when, return_when, relationships)
      traverser.each do |node|
        #...
      end
    end
-
 
 == Contributors
 

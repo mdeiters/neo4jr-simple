@@ -10,28 +10,24 @@ describe "Neo4j Working Examples" do
     end
   end
   
-  describe 'cruding a node' do
-    let(:node_id) do
-      node_id = nil
-      Neo4jr::DB.execute do |neo|
-        node = neo.createNode
-        node[:name] = 'Deiters, Matt'
-        node_id = node.getId
-      end
-      node_id
+  it 'cruds nodes' do
+    node_id = nil
+    #CREATES
+    Neo4jr::DB.execute do |neo|
+      node = neo.createNode
+      node[:name] = 'Deiters, Matt'
+      node_id = node.getId
     end
-    
-    after :each do
-      Neo4jr::DB.execute do |neo|
-        node = neo.getNodeById(node_id)
-        node.delete
-      end
+
+    #UPDATES
+    node = Neo4jr::DB.getNodeById(node_id)
+    node[:name].should == 'Deiters, Matt'
+
+    #DELETES
+    Neo4jr::DB.execute do |neo|
+      node = neo.getNodeById(node_id)
+      node.delete
     end
-    
-    it 'can later read the node' do
-      node = Neo4jr::DB.getNodeById(node_id)
-      node[:name].should == 'Deiters, Matt'
-    end  
   end
   
   it 'can traverse a node using the raw API' do
