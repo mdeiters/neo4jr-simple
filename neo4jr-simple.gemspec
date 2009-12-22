@@ -5,13 +5,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{neo4jr-simple}
-  s.authors = ["Matthew Deiters"]
-  s.email = %q{matthew_deiters@mckinsey.com}
-  s.description = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine. Nothing more then Neo4j and Ruby goodness}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
+
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.authors = ["Matthew Deiters"]
   s.date = %q{2009-12-21}
   s.default_executable = %q{neosh}
+  s.description = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine. Nothing more then Neo4j and Ruby goodness}
+  s.email = %q{matthew_deiters@mckinsey.com}
   s.executables = ["neosh"]
   s.extra_rdoc_files = [
     "LICENSE",
