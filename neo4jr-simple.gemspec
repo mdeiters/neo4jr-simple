@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
-  s.date = %q{2009-12-21}
+  s.date = %q{2009-12-23}
   s.default_executable = %q{neosh}
   s.description = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine. Nothing more then Neo4j and Ruby goodness}
   s.email = %q{matthew_deiters@mckinsey.com}
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/neosh",
+     "lib/jars/graph-algo-0.2-20090815.182816-1.jar",
      "lib/jars/jta-1.1.jar",
      "lib/jars/neo-1.0-b10.jar",
      "lib/jars/shell-1.0-b10.jar",
@@ -36,6 +37,8 @@ Gem::Specification.new do |s|
      "lib/neo4jr/direction.rb",
      "lib/neo4jr/node_extension.rb",
      "lib/neo4jr/order.rb",
+     "lib/neo4jr/property_container_extension.rb",
+     "lib/neo4jr/relationship_extension.rb",
      "lib/neo4jr/relationship_type.rb",
      "lib/neo4jr/returnable_evaluator.rb",
      "lib/neo4jr/stop_evaluator.rb",
@@ -43,8 +46,9 @@ Gem::Specification.new do |s|
      "lib/neo4jr/version.rb",
      "neo4jr-simple.gemspec",
      "spec/db_spec.rb",
+     "spec/direction_spec.rb",
      "spec/functional_example_spec.rb",
-     "spec/node_extension_spec.rb",
+     "spec/property_container_extension_spec.rb",
      "spec/returnable_evaluator_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
@@ -80,8 +84,9 @@ Gem::Specification.new do |s|
   s.summary = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine.}
   s.test_files = [
     "spec/db_spec.rb",
+     "spec/direction_spec.rb",
      "spec/functional_example_spec.rb",
-     "spec/node_extension_spec.rb",
+     "spec/property_container_extension_spec.rb",
      "spec/returnable_evaluator_spec.rb",
      "spec/spec_helper.rb",
      "spec/stop_evaluator_spec.rb"
