@@ -14,7 +14,7 @@ org.neo4j.api.core.PropertyContainer.java_class.ruby_class.class_eval do
   def []=(arg, value)
     set_property(arg.to_s, value)
   end
-  
+    
   def properties
     properties = {}
     propertyKeys.each do |property|
