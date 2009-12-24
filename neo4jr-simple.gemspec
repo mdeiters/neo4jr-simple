@@ -21,7 +21,6 @@ Gem::Specification.new do |s|
   s.files = [
     "bin/neosh",
      "lib/jars/graph-algo-0.2-20090815.182816-1.jar",
-     "lib/jars/graph-algo-0.2.jar",
      "lib/jars/jta-1.1.jar",
      "lib/jars/neo-1.0-b10.jar",
      "lib/jars/shell-1.0-b10.jar",
