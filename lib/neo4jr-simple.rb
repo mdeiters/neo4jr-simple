@@ -7,11 +7,17 @@ module Neo4jr
   require 'jars/neo-1.0-b10.jar'
   require 'jars/jta-1.1.jar'
   require 'jars/graph-algo-0.2-20090815.182816-1.jar'
-  
-  include_class 'java.lang.System'
-  
-  EmbeddedNeo    = org.neo4j.api.core.EmbeddedNeo
-  AllSimplePaths = org.neo4j.graphalgo.AllSimplePaths
+
+  java_import java.lang.System
+  java_import org.neo4j.api.core.EmbeddedNeo
+  java_import org.neo4j.graphalgo.AllSimplePaths
+  java_import org.neo4j.graphalgo.shortestpath.Dijkstra
+  java_import org.neo4j.graphalgo.shortestpath.CostEvaluator
+  java_import org.neo4j.graphalgo.shortestpath.std.IntegerEvaluator
+  java_import org.neo4j.graphalgo.shortestpath.std.DoubleAdder
+  java_import org.neo4j.graphalgo.shortestpath.std.DoubleComparator
+  java_import org.neo4j.api.core.DynamicRelationshipType
+  java_import org.neo4j.graphalgo.shortestpath.Dijkstra
 end
 
 require 'neo4jr/configuration'
