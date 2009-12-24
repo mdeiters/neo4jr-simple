@@ -14,4 +14,15 @@ describe 'property container extension' do
       tom_hanks[:testing].should == '123'
     end
   end
+  
+  it 'mass updates properties from a hash' do
+    hash = {:a => :b}
+    node_created = Neo4jr::DB.execute do |neo|
+      node = neo.createNode
+      node.update_properties(hash)
+      node
+    end
+    node_created[:a].should == 'b'
+  end
+  
 end

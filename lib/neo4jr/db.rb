@@ -3,8 +3,8 @@ module Neo4jr
     class << self
       def instance
         @neo ||= begin
-          neo = org.neo4j.api.core.EmbeddedNeo.new(Configuration.database_path)
-          neo.enable_remote_shell
+          neo = EmbeddedNeo.new(Configuration.database_path)
+          neo.enable_remote_shell if ENV['enable_neo_shell']
           at_exit do
             neo.shutdown
           end
@@ -13,18 +13,17 @@ module Neo4jr
       end
   
       def getNodeById(node_id)
-        n = nil
         execute do |neo|
-          n = neo.getNodeById(node_id)
+          neo.getNodeById(node_id)
         end
-        return n
       end
       
       def execute
         neo = instance
+        result = nil
         transaction = neo.beginTx();
         begin
-          yield neo
+          result = yield neo
           transaction.success
         rescue Exception => e
           transaction.failure
@@ -32,6 +31,7 @@ module Neo4jr
         ensure
           transaction.finish
         end
+        result
       end
       
       def node_count
@@ -39,15 +39,14 @@ module Neo4jr
       end
       
       def stats
-        info = ['== Database Stats ==']
-        info << "Path:  #{Configuration.database_path}"
-        info << "Nodes: #{node_count}"
-        info << '===================='
-        info.join("\n")
+        {
+          :path => Configuration.database_path,
+          :nodes => node_count
+        }
       end
       
       def to_s
-        stats
+        stats.inspect
       end      
     end
   end

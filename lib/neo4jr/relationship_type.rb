@@ -9,6 +9,10 @@ module Neo4jr
         return @@names[name] if @@names.include?(name)
         @@names[name] = RelationshipType.new(name)
       end
+      
+      def instances(*names)
+        names.map{|name| instance(name)}.to_java(org.neo4j.api.core.RelationshipType)
+      end
 
       def outgoing(type)
         covert_to_relationship_type(Neo4jr::Direction::OUTGOING, type)
@@ -33,13 +37,16 @@ module Neo4jr
     def to_s
       self.class.to_s + " name='#{@name}'"
     end
+    
+    def to_a
+      [self].to_java(org.neo4j.api.core.RelationshipType)
+    end
 
     def name
       @name
     end
 
     private
-
     def initialize(name)
       @name = name.to_s
       raise ArgumentError.new("Expect type of relationship to be a name of at least one character") if @name.empty?

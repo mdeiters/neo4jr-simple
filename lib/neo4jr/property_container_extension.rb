@@ -23,4 +23,16 @@ org.neo4j.api.core.PropertyContainer.java_class.ruby_class.class_eval do
     properties
   end
   
+  def update_properties(hash)
+    hash.each_pair do |key, value|
+      self[key] = convert(value) unless value.nil?
+    end unless hash.nil?
+  end
+  
+  private
+  def convert(value)
+    return value.to_s if value.is_a? Symbol
+    value
+  end
+  
 end

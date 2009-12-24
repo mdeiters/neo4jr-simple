@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{neo4jr-simple}
-  s.version = "0.1.3"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
@@ -19,14 +19,9 @@ Gem::Specification.new do |s|
      "README.rdoc"
   ]
   s.files = [
-    ".document",
-     ".gitignore",
-     "LICENSE",
-     "README.rdoc",
-     "Rakefile",
-     "VERSION",
-     "bin/neosh",
+    "bin/neosh",
      "lib/jars/graph-algo-0.2-20090815.182816-1.jar",
+     "lib/jars/graph-algo-0.2.jar",
      "lib/jars/jta-1.1.jar",
      "lib/jars/neo-1.0-b10.jar",
      "lib/jars/shell-1.0-b10.jar",
@@ -35,6 +30,8 @@ Gem::Specification.new do |s|
      "lib/neo4jr/configuration.rb",
      "lib/neo4jr/db.rb",
      "lib/neo4jr/direction.rb",
+     "lib/neo4jr/embedded_neo_extension.rb",
+     "lib/neo4jr/int_array_iterator_extension.rb",
      "lib/neo4jr/node_extension.rb",
      "lib/neo4jr/order.rb",
      "lib/neo4jr/property_container_extension.rb",
@@ -43,39 +40,7 @@ Gem::Specification.new do |s|
      "lib/neo4jr/returnable_evaluator.rb",
      "lib/neo4jr/stop_evaluator.rb",
      "lib/neo4jr/traverser_extension.rb",
-     "lib/neo4jr/version.rb",
-     "neo4jr-simple.gemspec",
-     "spec/db_spec.rb",
-     "spec/direction_spec.rb",
-     "spec/functional_example_spec.rb",
-     "spec/property_container_extension_spec.rb",
-     "spec/returnable_evaluator_spec.rb",
-     "spec/spec.opts",
-     "spec/spec_helper.rb",
-     "spec/stop_evaluator_spec.rb",
-     "spec/test-imdb-database/active_tx_log",
-     "spec/test-imdb-database/neostore",
-     "spec/test-imdb-database/neostore.id",
-     "spec/test-imdb-database/neostore.nodestore.db",
-     "spec/test-imdb-database/neostore.nodestore.db.id",
-     "spec/test-imdb-database/neostore.propertystore.db",
-     "spec/test-imdb-database/neostore.propertystore.db.arrays",
-     "spec/test-imdb-database/neostore.propertystore.db.arrays.id",
-     "spec/test-imdb-database/neostore.propertystore.db.id",
-     "spec/test-imdb-database/neostore.propertystore.db.index",
-     "spec/test-imdb-database/neostore.propertystore.db.index.id",
-     "spec/test-imdb-database/neostore.propertystore.db.index.keys",
-     "spec/test-imdb-database/neostore.propertystore.db.index.keys.id",
-     "spec/test-imdb-database/neostore.propertystore.db.strings",
-     "spec/test-imdb-database/neostore.propertystore.db.strings.id",
-     "spec/test-imdb-database/neostore.relationshipstore.db",
-     "spec/test-imdb-database/neostore.relationshipstore.db.id",
-     "spec/test-imdb-database/neostore.relationshiptypestore.db",
-     "spec/test-imdb-database/neostore.relationshiptypestore.db.id",
-     "spec/test-imdb-database/neostore.relationshiptypestore.db.names",
-     "spec/test-imdb-database/neostore.relationshiptypestore.db.names.id",
-     "spec/test-imdb-database/nioneo_logical.log.active",
-     "spec/test-imdb-database/tm_tx_log.1"
+     "lib/neo4jr/version.rb"
   ]
   s.homepage = %q{http://github.com/mdeiters/neo4jr-simple}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -83,13 +48,20 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine.}
   s.test_files = [
-    "spec/db_spec.rb",
+    "VERSION",
+     "spec/db_spec.rb",
      "spec/direction_spec.rb",
+     "spec/embedded_neo_extension_spec.rb",
      "spec/functional_example_spec.rb",
+     "spec/int_array_iterator_extension_spec.rb",
+     "spec/node_extension_spec.rb",
      "spec/property_container_extension_spec.rb",
+     "spec/relationship_type_spec.rb",
      "spec/returnable_evaluator_spec.rb",
+     "spec/spec.opts",
      "spec/spec_helper.rb",
-     "spec/stop_evaluator_spec.rb"
+     "spec/stop_evaluator_spec.rb",
+     "spec/test-imdb-database"
   ]
 
   if s.respond_to? :specification_version then
