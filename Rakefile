@@ -11,8 +11,9 @@ begin
     gem.homepage = "http://github.com/mdeiters/neo4jr-simple"
     gem.authors = ["Matthew Deiters"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "jeweler"
     gem.test_files = ['VERSION', 'spec/**']
-    gem.files = ['lib/**/*', 'bin/**/*']
+    gem.files = ['lib/**/*', 'bin/**/*', 'VERSION']
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
