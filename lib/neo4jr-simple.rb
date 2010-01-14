@@ -17,7 +17,6 @@ module Neo4jr
   java_import org.neo4j.graphalgo.shortestpath.std.DoubleAdder
   java_import org.neo4j.graphalgo.shortestpath.std.DoubleComparator
   java_import org.neo4j.api.core.DynamicRelationshipType
-  java_import org.neo4j.graphalgo.shortestpath.Dijkstra
 end
 
 require 'neo4jr/configuration'
