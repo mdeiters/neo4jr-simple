@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
-  s.date = %q{2010-01-12}
+  s.date = %q{2010-01-19}
   s.default_executable = %q{neosh}
   s.description = %q{A simple, ready to go JRuby wrapper for the Neo4j graph database engine. Nothing more then Neo4j and Ruby goodness}
   s.email = %q{matthew_deiters@mckinsey.com}
@@ -21,9 +21,17 @@ Gem::Specification.new do |s|
   s.files = [
     "VERSION",
      "bin/neosh",
+     "lib/jars/geronimo-jta_1.1_spec-1.1.1.jar",
      "lib/jars/graph-algo-0.2-20090815.182816-1.jar",
+     "lib/jars/jline-0.9.94.jar",
      "lib/jars/jta-1.1.jar",
+     "lib/jars/lucene-core-2.9.1.jar",
      "lib/jars/neo-1.0-b10.jar",
+     "lib/jars/neo4j-commons-0.4.jar",
+     "lib/jars/neo4j-index-1.0-b1.jar",
+     "lib/jars/neo4j-kernel-1.0-rc.jar",
+     "lib/jars/neo4j-remote-graphdb-0.5.jar",
+     "lib/jars/neo4j-shell-1.0-rc.jar",
      "lib/jars/shell-1.0-b10.jar",
      "lib/neo4jr-simple.rb",
      "lib/neo4jr/cli.rb",
