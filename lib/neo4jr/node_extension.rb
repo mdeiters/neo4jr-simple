@@ -1,4 +1,4 @@
-org.neo4j.api.core.Node.java_class.ruby_class.class_eval do 
+org.neo4j.graphdb.Node.java_class.ruby_class.class_eval do 
   
   def id
     getId

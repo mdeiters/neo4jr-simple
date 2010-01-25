@@ -1,8 +1,8 @@
 module Neo4jr
   # SEE: http://api.neo4j.org/current/org/neo4j/api/core/ReturnableEvaluator.html
   class ReturnableEvaluator
-    ALL                = org.neo4j.api.core.ReturnableEvaluator.ALL
-    ALL_BUT_START_NODE = org.neo4j.api.core.ReturnableEvaluator.ALL_BUT_START_NODE
+    ALL                = org.neo4j.graphdb.ReturnableEvaluator.ALL
+    ALL_BUT_START_NODE = org.neo4j.graphdb.ReturnableEvaluator.ALL_BUT_START_NODE
     
     # Creates a new ReturnableEvaluator on the fly that delgates to the passed in block to use with the traverse method. 
     # The block should return either true or false

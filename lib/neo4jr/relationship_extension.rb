@@ -1,4 +1,4 @@
-org.neo4j.api.core.Relationship.java_class.ruby_class.class_eval do 
+org.neo4j.graphdb.Relationship.java_class.ruby_class.class_eval do 
   
   def to_hash
     properties

@@ -1,4 +1,4 @@
-org.neo4j.api.core.EmbeddedNeo.java_class.ruby_class.class_eval do 
+org.neo4j.kernel.EmbeddedGraphDatabase.java_class.ruby_class.class_eval do 
   
   alias :orginalGetNodeById :getNodeById
   def getNodeById(id)

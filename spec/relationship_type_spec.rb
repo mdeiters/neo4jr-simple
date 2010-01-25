@@ -15,7 +15,7 @@ describe Neo4jr::RelationshipType do
   
   it 'can covert one relationship type to a java array so it can be used with the neo4j API' do
     relationship_type = Neo4jr::RelationshipType.instance('worked_in')
-    relationship_type.to_a.class.java_class.to_s.should == '[Lorg.neo4j.api.core.RelationshipType;'
+    relationship_type.to_a.class.java_class.to_s.should == '[Lorg.neo4j.graphdb.RelationshipType;'
   end
   
 end

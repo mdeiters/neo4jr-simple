@@ -3,20 +3,26 @@ $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)))
 include Java
 
 module Neo4jr
-  require 'jars/shell-1.0-b10.jar'
-  require 'jars/neo-1.0-b10.jar'
-  require 'jars/jta-1.1.jar'
-  require 'jars/graph-algo-0.2-20090815.182816-1.jar'
+
+  require 'jars/neo4j-kernel-1.0-rc.jar'
+  require 'jars/lucene-core-2.9.1.jar'
+  require 'jars/neo4j-index-1.0-b1.jar'
+  require 'jars/geronimo-jta_1.1_spec-1.1.1.jar'
+  require 'jars/jline-0.9.94.jar'
+  require 'jars/neo4j-commons-0.4.jar'
+  require 'jars/neo4j-remote-graphdb-0.5.jar'
+  require 'jars/neo4j-graph-algo-0.3-20100125.090624-8.jar'
 
   java_import java.lang.System
-  java_import org.neo4j.api.core.EmbeddedNeo
+  java_import org.neo4j.kernel.EmbeddedGraphDatabase
+  java_import org.neo4j.graphdb.DynamicRelationshipType
+  java_import org.neo4j.graphdb.Traverser
   java_import org.neo4j.graphalgo.AllSimplePaths
   java_import org.neo4j.graphalgo.shortestpath.Dijkstra
   java_import org.neo4j.graphalgo.shortestpath.CostEvaluator
   java_import org.neo4j.graphalgo.shortestpath.std.IntegerEvaluator
   java_import org.neo4j.graphalgo.shortestpath.std.DoubleAdder
   java_import org.neo4j.graphalgo.shortestpath.std.DoubleComparator
-  java_import org.neo4j.api.core.DynamicRelationshipType
 end
 
 require 'neo4jr/configuration'

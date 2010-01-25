@@ -1,6 +1,6 @@
 module Neo4jr
   class RelationshipType
-    include org.neo4j.api.core.RelationshipType
+    include org.neo4j.graphdb.RelationshipType
 
     @@names = {}
 
@@ -11,7 +11,7 @@ module Neo4jr
       end
       
       def instances(*names)
-        names.map{|name| instance(name)}.to_java(org.neo4j.api.core.RelationshipType)
+        names.map{|name| instance(name)}.to_java(org.neo4j.graphdb.RelationshipType)
       end
 
       def outgoing(type)
@@ -39,7 +39,7 @@ module Neo4jr
     end
     
     def to_a
-      [self].to_java(org.neo4j.api.core.RelationshipType)
+      [self].to_java(org.neo4j.graphdb.RelationshipType)
     end
 
     def name

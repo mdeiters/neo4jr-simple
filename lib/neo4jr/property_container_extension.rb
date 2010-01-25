@@ -1,5 +1,5 @@
 # Extends the Node class with a hash style accessor methods to the node's properties
-org.neo4j.api.core.PropertyContainer.java_class.ruby_class.class_eval do 
+org.neo4j.graphdb.PropertyContainer.java_class.ruby_class.class_eval do 
   
   # Example:
   #    node[:name] #=> 'Matt'

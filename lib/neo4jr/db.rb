@@ -3,7 +3,7 @@ module Neo4jr
     class << self
       def instance
         @neo ||= begin
-          neo = EmbeddedNeo.new(Configuration.database_path)
+          neo = EmbeddedGraphDatabase.new(Configuration.database_path)
           at_exit do
             neo.shutdown
           end
@@ -34,7 +34,7 @@ module Neo4jr
       end
       
       def node_count
-        instance.getConfig().getNeoModule().getNodeManager().getNumberOfIdsInUse(org.neo4j.api.core.Node.java_class)
+        instance.getConfig().getNeoModule().getNodeManager().getNumberOfIdsInUse(org.neo4j.graphdb.Node.java_class)
       end
       
       def stats
