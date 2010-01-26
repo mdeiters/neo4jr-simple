@@ -16,5 +16,12 @@ org.neo4j.kernel.EmbeddedGraphDatabase.java_class.ruby_class.class_eval do
   def find_node_by_identifier(identifier_value)
     Neo4jr::Indexer.find_node_by_identifier(identifier_value)
   end
-    
+  
+  def find_node(value)
+    find_node_by_identifier(value) || begin
+      node_id = value.to_f 
+      getNodeById(node_id) if node_id > 0
+    end
+  end
+  
 end
