@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{neo4jr-simple}
-  s.version = "0.1.8"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
@@ -58,6 +58,7 @@ Gem::Specification.new do |s|
     "VERSION",
      "spec/db_spec.rb",
      "spec/direction_spec.rb",
+     "spec/embedded_graph_database_spec.rb",
      "spec/functional_example_spec.rb",
      "spec/indexer_spec.rb",
      "spec/int_array_iterator_extension_spec.rb",
