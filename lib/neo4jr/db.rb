@@ -1,5 +1,6 @@
 module Neo4jr
   class DB
+    
     class << self
       def instance
         @neo ||= begin
@@ -7,6 +8,7 @@ module Neo4jr
           at_exit do
             neo.shutdown
           end
+          Neo4jr::Indexer.use neo
           neo
         end
       end

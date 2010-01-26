@@ -12,6 +12,9 @@ org.neo4j.kernel.EmbeddedGraphDatabase.java_class.ruby_class.class_eval do
     node
   end
   alias :create_node :createNode
-  
-  
+
+  def find_node_by_identifier(identifier_value)
+    Neo4jr::Indexer.find_node_by_identifier(identifier_value)
+  end
+    
 end

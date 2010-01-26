@@ -12,6 +12,7 @@ org.neo4j.graphdb.PropertyContainer.java_class.ruby_class.class_eval do
   #    node[:name] = 'Matt'
   #
   def []=(arg, value)
+    Neo4jr::Indexer.attempt_index(self, arg.to_s, value)
     set_property(arg.to_s, value)
   end
     

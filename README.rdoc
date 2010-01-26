@@ -38,6 +38,15 @@ Retrieve a Node:
      node = neo.getNodeById(1234)
    end
   
+Find a Node by some value you control:
+
+   Neo4jr::DB.execute do |neo|
+     # If you add a property 'identifier' to a node, the value can be used to retrieve the node by
+     # This can by an id or string but the value must be unique to this node
+     # e.g. node[:identifier] = user.id
+     node = neo.find_node_by_identifier(user.id)
+   end
+  
 Traverse Database from a node:
 
    Neo4jr::DB.execute do |neo|

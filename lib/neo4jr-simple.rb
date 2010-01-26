@@ -17,6 +17,7 @@ module Neo4jr
   java_import org.neo4j.kernel.EmbeddedGraphDatabase
   java_import org.neo4j.graphdb.DynamicRelationshipType
   java_import org.neo4j.graphdb.Traverser
+  java_import org.neo4j.index.lucene.LuceneIndexService
   java_import org.neo4j.graphalgo.AllSimplePaths
   java_import org.neo4j.graphalgo.shortestpath.Dijkstra
   java_import org.neo4j.graphalgo.shortestpath.CostEvaluator
@@ -27,6 +28,7 @@ end
 
 require 'neo4jr/configuration'
 require 'neo4jr/db'
+require 'neo4jr/indexer'
 require 'neo4jr/relationship_type'
 require 'neo4jr/embedded_neo_extension'
 require 'neo4jr/node_extension'
