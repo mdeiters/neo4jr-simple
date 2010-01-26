@@ -3,7 +3,6 @@ $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)))
 include Java
 
 module Neo4jr
-
   require 'jars/neo4j-kernel-1.0-rc.jar'
   require 'jars/lucene-core-2.9.1.jar'
   require 'jars/neo4j-index-1.0-b1.jar'
