@@ -3,14 +3,14 @@ $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)))
 include Java
 
 module Neo4jr
-  require 'jars/neo4j-kernel-1.0-rc.jar'
+  require 'jars/neo4j-kernel-1.0.jar'
   require 'jars/lucene-core-2.9.1.jar'
-  require 'jars/neo4j-index-1.0-b1.jar'
+  require 'jars/neo4j-index-1.0.jar'
   require 'jars/geronimo-jta_1.1_spec-1.1.1.jar'
   require 'jars/jline-0.9.94.jar'
-  require 'jars/neo4j-commons-0.4.jar'
-  require 'jars/neo4j-remote-graphdb-0.5.jar'
-  require 'jars/neo4j-graph-algo-0.3-20100125.090624-8.jar'
+  require 'jars/neo4j-commons-1.0.jar'
+  require 'jars/neo4j-remote-graphdb-0.6.jar'
+  require 'jars/neo4j-graph-algo-0.5-20100430.103813-56.jar'
 
   java_import java.lang.System
   java_import org.neo4j.kernel.EmbeddedGraphDatabase

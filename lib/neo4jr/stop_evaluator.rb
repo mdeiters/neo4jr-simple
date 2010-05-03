@@ -3,7 +3,6 @@ module Neo4jr
   class StopEvaluator
     DEPTH_ONE      = org.neo4j.graphdb.StopEvaluator::DEPTH_ONE
     END_OF_GRAPH   = org.neo4j.graphdb.StopEvaluator::END_OF_GRAPH
-    END_OF_NETWORK = org.neo4j.graphdb.StopEvaluator::END_OF_NETWORK
 
     # Creates a new StopEvaluator on the fly that delgates to the passed in block to use with the traverse method. 
     # The block should return either true or false
