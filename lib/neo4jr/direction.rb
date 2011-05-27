@@ -6,9 +6,9 @@ module Neo4jr
     
     def self.from_string(value)
       case value.upcase
-        when 'BOTH': return BOTH
-        when 'OUTGOING': return OUTGOING
-        when 'INCOMING': return INCOMING
+        when 'BOTH' then return BOTH
+        when 'OUTGOING' then return OUTGOING
+        when 'INCOMING' then return INCOMING
       end
     end
   end
